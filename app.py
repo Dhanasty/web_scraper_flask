@@ -74,7 +74,7 @@ def review():
                           "Comment": custComment}
                 reviews.append(mydict)
             logging.info("log my final result {}".format(reviews))
-            client = pymongo.MongoClient("mongodb+srv://dhanasty:dhanasty12@cluster0.j0albnn.mongodb.net/")
+            client = pymongo.MongoClient("mongodb+srv://dhanasty:dhanasty@cluster0.j0albnn.mongodb.net/")
             db =client['scrapper_eng_pwskills']
             coll_pw_eng = db['scraper_pwskills_eng']
             coll_pw_eng.insert_many(reviews)
